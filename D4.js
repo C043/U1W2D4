@@ -69,13 +69,37 @@ const crazySum = function (int1, int2) {
 
 console.log(crazySum(1, 2));
 console.log(crazySum(5, 5));
+
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 3");
 
+const crazyDiff = function (number) {
+  if (typeof number === "number") {
+    if (number > 19) {
+      const difference = number - 19;
+      const product = difference * 3;
+      return (
+        "Il numero " +
+        number +
+        " è più grande di 19, dopo la differenza, moltiplicheremo per 3. La differenza è " +
+        difference +
+        " e la moltiplicazione è " +
+        product
+      );
+    }
+    const difference = number - 19;
+    return "La differenza assoluta fra " + number + " e 19 è " + difference;
+  } else {
+    return "Devi inserire un numero!";
+  }
+};
+
+console.log(crazyDiff(5));
+console.log(crazyDiff(34));
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
