@@ -240,4 +240,18 @@ console.log(cutString("Prova dai funziona!"));
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 10");
+
+const giveMeRandom = function (n) {
+  if (typeof n === "number") {
+    const numeriCasuali = [];
+    for (let i = 0; i < n; i++) {
+      numeriCasuali.push(Math.floor(Math.random() * 11));
+    }
+    return numeriCasuali;
+  } else {
+    return "Devi inserire un numero!";
+  }
+};
+
+console.log(giveMeRandom(20));
