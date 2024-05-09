@@ -30,8 +30,45 @@ console.log(area(35, "72"));
  la loro somma moltiplicata per tre.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 2");
 
+const crazySum = function (int1, int2) {
+  if (
+    typeof int1 === "number" &&
+    typeof int2 === "number" &&
+    Number.isInteger(int1) &&
+    Number.isInteger(int2)
+  ) {
+    if (int1 === int2) {
+      const intSum = int1 + int2;
+      const intProduct = intSum * 3;
+      return (
+        "La somma del numero " +
+        int1 +
+        " e del numero " +
+        int2 +
+        " è unguale a " +
+        intSum +
+        " moltiplicato per 3 fa " +
+        intProduct
+      );
+    }
+    const intSum = int1 + int2;
+    return (
+      "La somma del numero " +
+      int1 +
+      " e del numero " +
+      int2 +
+      " è unguale a " +
+      intSum
+    );
+  } else {
+    return "Devi inserire dei numeri interi!";
+  }
+};
+
+console.log(crazySum(1, 2));
+console.log(crazySum(5, 5));
 /* ESERCIZIO 3
  Scrivi una funzione di nome "crazyDiff" che calcola la differenza assoluta tra un numero fornito come parametro e 19.
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
