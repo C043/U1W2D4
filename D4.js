@@ -129,7 +129,25 @@ console.log(boundary("stringa"));
  ritornare la stringa originale senza alterarla.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 5");
+
+const epify = function (stringa) {
+  if (typeof stringa === "string") {
+    const words = stringa.split(" ");
+    const firstWord = words[0];
+    if (firstWord === "EPICODE") {
+      return stringa;
+    }
+    let epicode = "EPICODE ";
+    return (epicode += stringa);
+  } else {
+    return "Devi inserire una stringa!";
+  }
+};
+
+console.log(epify("Mario Fragnito"));
+console.log(epify(32));
+console.log(epify("EPICODE La scuola che fa per te!"));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
