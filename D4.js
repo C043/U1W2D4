@@ -180,7 +180,20 @@ console.log(check3and7(-10));
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 7");
+
+const reverseString = function (stringa) {
+  if (typeof stringa === "string") {
+    const lettere = stringa.split("");
+    const reverseLettere = lettere.reverse();
+    const reverseStringa = reverseLettere.join().replaceAll(",", "");
+    return reverseStringa;
+  } else {
+    return "Devi inserire una stringa!";
+  }
+};
+
+console.log(reverseString("EPICODE"));
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
