@@ -186,7 +186,7 @@ const reverseString = function (stringa) {
   if (typeof stringa === "string") {
     const lettere = stringa.split("");
     const reverseLettere = lettere.reverse();
-    const reverseStringa = reverseLettere.join().replaceAll(",", "");
+    const reverseStringa = reverseLettere.join("");
     return reverseStringa;
   } else {
     return "Devi inserire una stringa!";
@@ -255,3 +255,4 @@ const giveMeRandom = function (n) {
 };
 
 console.log(giveMeRandom(20));
+console.log(giveMeRandom("prova"));
