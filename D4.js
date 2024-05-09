@@ -154,7 +154,27 @@ console.log(epify("EPICODE La scuola che fa per te!"));
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 6");
+
+const check3and7 = function (n) {
+  if (typeof n === "number" && n > 0) {
+    if (n % 3 === 0) {
+      return "Il numero " + n + " è un multiplo di 3";
+    } else if (n % 7 === 0) {
+      return "Il numero " + n + " è un multiplo di 7";
+    } else {
+      return "Il numero " + n + " non è nè un multiplo di 3 e nè multiplo di 7";
+    }
+  } else {
+    return "Devi inserire un numero positivo!";
+  }
+};
+
+console.log(check3and7(6));
+console.log(check3and7(14));
+console.log(check3and7(32));
+console.log(check3and7("prova"));
+console.log(check3and7(-10));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
