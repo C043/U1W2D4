@@ -200,14 +200,41 @@ console.log(reverseString("EPICODE"));
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 8");
+
+// Capire coìome funziona
+const upperFirst = function (stringa) {
+  if (typeof stringa === "string") {
+    return stringa
+      .split(" ")
+      .map((parole) => parole.charAt(0).toLocaleUpperCase() + parole.slice(1))
+      .join(" ");
+  } else {
+    return "Devi inserire una stringa!";
+  }
+};
+
+console.log(upperFirst("Prova dai per favore"));
+console.log(upperFirst(34));
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 9");
+
+const cutString = function (stringa) {
+  if (typeof stringa === "string") {
+    const primoCarattere = stringa[0];
+    const ultimoCarattere = stringa[stringa.length - 1];
+    return primoCarattere + ultimoCarattere;
+  } else {
+    return "Devi inserire una stringa!";
+  }
+};
+
+console.log(cutString("Prova dai funziona!"));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
