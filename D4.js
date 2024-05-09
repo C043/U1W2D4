@@ -100,12 +100,28 @@ const crazyDiff = function (number) {
 
 console.log(crazyDiff(5));
 console.log(crazyDiff(34));
+
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO 4");
+
+const boundary = function (n) {
+  if (typeof n === "number" && Number.isSafeInteger(n)) {
+    if ((n >= 20 && n <= 100) || n === 400) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return "Devi inserire un numero intero!";
+  }
+};
+
+console.log(boundary(20));
+console.log(boundary("stringa"));
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
