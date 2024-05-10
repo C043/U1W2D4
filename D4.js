@@ -392,7 +392,28 @@ console.log(latestShoppingCart(shoppingCart));
  La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO EXTRA 6");
+
+const loopUntil = function (int) {
+  if (int > 0 && int < 10 && Number.isSafeInteger(int)) {
+    let randomNumber = 0;
+    let stop = 0;
+    while (randomNumber < int || stop < 3) {
+      const generateRandom = Math.floor(Math.random() * 10);
+      randomNumber = generateRandom;
+      if (randomNumber < int) {
+        console.log(randomNumber);
+      } else {
+        stop++;
+        console.log("stop", stop);
+      }
+    }
+  } else {
+    console.log("Devi inserire un numero intero da 0 a 9!");
+  }
+};
+
+loopUntil(9);
 
 /* EXTRA 7
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
