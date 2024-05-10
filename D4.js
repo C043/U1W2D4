@@ -205,10 +205,17 @@ console.log("ESERCIZIO 8");
 // Capire coìome funziona
 const upperFirst = function (stringa) {
   if (typeof stringa === "string") {
-    return stringa
-      .split(" ")
-      .map((parole) => parole.charAt(0).toLocaleUpperCase() + parole.slice(1))
-      .join(" ");
+    let words = stringa.split(" ");
+    let finalWords = [];
+    for (let i = 0; i < words.length; i++) {
+      let firstChar = words[i].charAt(0);
+      let uppercaseChar = firstChar.toUpperCase();
+      let cutString = words[i].slice(1);
+      let finalWord = uppercaseChar + cutString;
+      finalWords.push(finalWord);
+    }
+    const finalString = finalWords.join().replaceAll(",", " ");
+    return finalString;
   } else {
     return "Devi inserire una stringa!";
   }
@@ -226,15 +233,13 @@ console.log("ESERCIZIO 9");
 
 const cutString = function (stringa) {
   if (typeof stringa === "string") {
-    const primoCarattere = stringa[0];
-    const ultimoCarattere = stringa[stringa.length - 1];
-    return primoCarattere + ultimoCarattere;
+    return stringa.slice(1, stringa.length - 1);
   } else {
     return "Devi inserire una stringa!";
   }
 };
 
-console.log(cutString("Prova dai funziona!"));
+console.log(cutString("Prova dai funziona"));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
