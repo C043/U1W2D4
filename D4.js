@@ -419,8 +419,27 @@ loopUntil(9);
 Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO EXTRA 7");
 
+const numArray = [5, 6, 10, "skippalo", 6, "skip"];
+
+const average = function (array) {
+  let sum = 0;
+  let count = 0;
+  for (let i = 0; i < array.length; i++) {
+    const currentElement = array[i];
+    if (typeof currentElement === "number") {
+      sum += currentElement;
+      count++;
+    } else {
+      console.log("Skippato");
+    }
+  }
+  const media = sum / count;
+  return media;
+};
+
+console.log(average(numArray));
 /* EXTRA 8
  Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
 */
