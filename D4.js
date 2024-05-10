@@ -465,7 +465,25 @@ longest(stringArray);
  La funzione deve ritornare true se "emailContent" non contiene le parole "SPAM" o "SCAM".
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO EXTRA 9");
+
+const emailContent = "Prova prova prova SCAM";
+const emailContent1 = "prova prova prova";
+
+const antiSpamFilter = function (emailContent) {
+  if (typeof emailContent === "string") {
+    if (!emailContent.includes("SCAM") && !emailContent.includes("SPAM")) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    console.log("Devi inserire una stringa");
+  }
+};
+
+console.log(antiSpamFilter(emailContent));
+console.log(antiSpamFilter(emailContent1));
 
 /* EXTRA 10
  Scrivi una funzione che riceve una data come parametro, e calcola il numero di giorni passati da quella data.
