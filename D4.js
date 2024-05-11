@@ -510,4 +510,20 @@ console.log("Giorni passati dal quando sono nato:", fromDate(date));
  "10","11","12"]
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+console.log("ESERCIZIO EXTRA 11");
+
+const matrixGenerator = function (x, y) {
+  const matrix = [];
+  for (let b = 0; b < y; b++) {
+    const row = [];
+    for (let i = 0; i < x; i++) {
+      let index = b.toString().concat(i.toString());
+      console.log(index);
+      row.push(index);
+    }
+    matrix.push(row);
+  }
+  console.log(matrix);
+};
+
+matrixGenerator(5, 3);
